@@ -1,5 +1,7 @@
 import unittest
 from datetime import datetime
+import sys
+sys.path.append("E:/WORKSPACE/forage-lyft-starter-repo")
 
 from engine.model.calliope import Calliope
 from engine.model.glissade import Glissade
@@ -185,4 +187,4 @@ class TestThovex(unittest.TestCase):
 
 
 if __name__ == '__main__':
-    unittest.main()
+    unittest.main(exit=False)
