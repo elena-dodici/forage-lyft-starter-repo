@@ -1,16 +1,18 @@
 # -*- coding: utf-8 -*-
-from abc import ABC
+#it's generalization from battery, no need ABC
+#from abc import ABC
 
 #from car import Car
-from battery import Battery
+from battery.battery import Battery
+from add_year import addYears
 
 
-class SpindlerBattery(Battery, ABC):
+class SpindlerBattery(Battery):
 
-    def __init(self,last_service_date,current_date):
+    def __init__(self,last_service_date,current_date):
         self.last_service_date = last_service_date
         self.current_date = current_date
 
 
-    def need_service(self):
-        return self.current_date - self.last_service_date > 200
+    def needs_service(self):
+        return self.current_date > addYears(self.last_service_date,2)
