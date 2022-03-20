@@ -15,4 +15,4 @@ class SpindlerBattery(Battery):
 
 
     def needs_service(self):
-        return self.current_date > addYears(self.last_service_date,2)
+        return self.current_date > addYears(self.last_service_date,3)
